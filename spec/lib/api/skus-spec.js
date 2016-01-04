@@ -200,6 +200,15 @@ describe('Http.Api.Skus', function () {
             });
         });
 
+        describe('PUT /skus/pack', function () {
+        });
+
+        describe('PUT /skus/:id/pack', function () {
+        });
+
+        describe('DELETE /skus/:id/pack', function () {
+        });
+
     });
 
 });
