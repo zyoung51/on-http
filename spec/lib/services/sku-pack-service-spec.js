@@ -10,7 +10,8 @@ describe("SKU Pack Service", function() {
 
     before(function() {
         helper.setupInjector([
-            helper.require("/lib/services/sku-pack-service")
+            helper.require("/lib/services/sku-pack-service"),
+            dihelper.requireWrapper("rimraf", "rimraf")
         ]);
 
         skuService = helper.injector.get('Http.Services.SkuPack');
