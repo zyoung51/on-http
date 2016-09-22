@@ -4,8 +4,7 @@
 
 var _ = require('lodash'),  /* jshint ignore: line */
     _di = require('di'),
-    onCore = require('on-core'),
-    onTasks = require('on-tasks');
+    onCore = require('on-core');
 
 var self = module.exports = {
     injector: null,
@@ -49,7 +48,6 @@ function onHttpContextFactory(di, directory) {
 
         prerequisiteInjectables: _.flattenDeep([
             core.workflowInjectables,
-            onTasks.injectables,
             helper.requireWrapper('swagger-express-mw', 'swagger', undefined, __dirname)
         ])
     };
